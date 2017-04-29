@@ -1,0 +1,56 @@
+[gd_scene load_steps=4 format=1]
+
+[ext_resource path="res://scenes/farm/farm.gd" type="Script" id=1]
+[ext_resource path="res://scenes/farm/farm.tex" type="Texture" id=2]
+[ext_resource path="res://scenes/soil/soil.tscn" type="PackedScene" id=3]
+
+[node name="farm" type="Node2D"]
+
+script/script = ExtResource( 1 )
+
+[node name="background" type="Sprite" parent="."]
+
+texture = ExtResource( 2 )
+centered = false
+
+[node name="soils" type="Node2D" parent="."]
+
+[node name="soil0" parent="soils" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 96, 224 )
+
+[node name="soil1" parent="soils" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 192, 224 )
+
+[node name="soil2" parent="soils" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 288, 224 )
+
+[node name="soil3" parent="soils" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 96, 320 )
+
+[node name="soil4" parent="soils" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 192, 320 )
+
+[node name="soil5" parent="soils" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 288, 320 )
+
+[node name="money" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 14.0
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+
